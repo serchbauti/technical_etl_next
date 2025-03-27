@@ -1,16 +1,15 @@
 # Technical Test Etl Next Technologies
 
 ## Descripción
-Este proyecto se lleva a cabo para generar un etl, el cual esta esta estructurado en una arquitecura modular basado en capas, decidi usar el lenguaje de programación python ya que es un lenguaje bastante amigable para el analisis de datos.
+Este proyecto se lleva a cabo para generar un etl, el cual esta esta estructurado con arquitecura modular basado en capas, decidi usar el lenguaje de programación python ya que es un lenguaje bastante amigable para el analisis de datos.
 El proyecto usa Docker y Docker Compose para configurar y gestionar el entorno de ejecución.
 
-## Porque PostresSQL?
+## Porque PostgresSQL?
 Elegi utilizar PostgreSQL porque se requiere relaciones bien definidas, integridad de datos y consultas eficientes, PostgreSQL se integra fácilmente con herramientas ETL y BI, facilitando análisis y reportes.
 Para un sistema relacional y analítico, es la mejor elección sobre NoSQL.
 
 ## Retos de la prueba
 - Manejo de datos inconsistentes: Se encontraron valores nulos y formatos incorrectos en columnas críticas, lo que requirió validaciones adicionales.
-
 - Carga por lotes: Para mejorar el rendimiento, se implementó un procesamiento por lotes en la inserción de datos.
 - Uso de Lazy Loading: Se emplearon generadores en la lectura del CSV para evitar sobrecargar la memoria con grandes volúmenes de datos.
 - Optimización de inserciones: Se usó execute_values para insertar datos en bloques, reduciendo el impacto en la base de datos.
@@ -37,7 +36,7 @@ Para un sistema relacional y analítico, es la mejor elección sobre NoSQL.
 ### 2️⃣ Construcción y Ejecución
 ```bash
 # Clonar el repositorio
-git clone <repo_url>
+git clone https://github.com/serchbauti/technical_etl_next
 cd technical-test
 
 # Construir e iniciar los servicios
