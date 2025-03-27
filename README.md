@@ -37,7 +37,7 @@ Para un sistema relacional y analítico, es la mejor elección sobre NoSQL.
 ```bash
 # Clonar el repositorio
 git clone https://github.com/serchbauti/technical_etl_next
-cd technical-test
+cd technical_etl_next/
 
 # Construir e iniciar los servicios
 docker-compose up -d
