@@ -71,6 +71,12 @@ Utiliza los siguientes parámetros de conexión:
 - **Usuario:** `admin`
 - **Contraseña:** `adminpass`
 
+## Test
+```bash
+# Ejecutar el script ETL
+python -m unittest discover -s test
+```
+
 ## 📄 Notas Adicionales
 
 - Asegúrate de que los puertos necesarios no estén siendo utilizados por otros servicios.
