@@ -18,7 +18,6 @@ class Database:
         self.port = port
 
     def get_connection(self):
-        """Retorna una conexión a la base de datos."""
         return psycopg2.connect(
             dbname=self.dbname,
             user=self.user,
