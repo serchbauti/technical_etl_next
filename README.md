@@ -71,9 +71,12 @@ Utiliza los siguientes parámetros de conexión:
 - **Usuario:** `admin`
 - **Contraseña:** `adminpass`
 
-## Test
+## 🛠️ Test
 ```bash
-# Ejecutar el script ETL
+# Acceder al contenedor de la aplicación
+docker exec -it <nombre_del_contenedor_app> bash
+
+# Ejecutar el comando
 python -m unittest discover -s test
 ```
 
