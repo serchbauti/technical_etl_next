@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: test_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+  
+  app:
+    build: .
+    depends_on:
+      - db
+    networks:
+      - app-network
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=test_db
+      - DB_USER=admin
+      - DB_PASSWORD=adminpass
+
+networks:
+  app-network:
+    driver: bridge
+
+
+volumes:
+  postgres_data:
