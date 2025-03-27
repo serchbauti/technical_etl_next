@@ -76,4 +76,8 @@ Utiliza los siguientes parámetros de conexión:
 - Asegúrate de que los puertos necesarios no estén siendo utilizados por otros servicios.
 - Puedes detener los servicios en cualquier momento con `docker-compose down`.
 
+## Licencia
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
 
+## Contacto
+Para preguntas o soporte adicional, por favor contacta a [perez.sergiob@gmail.com].
