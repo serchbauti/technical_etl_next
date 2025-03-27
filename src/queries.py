@@ -1,3 +1,4 @@
+"""Handler queries"""
 queries = {
     "CREATE_TABLE_RAW_DATA": """
         CREATE TABLE IF NOT EXISTS raw_data (
@@ -45,5 +46,23 @@ queries = {
         AND company_id IS NOT NULL
         AND amount IS NOT NULL
         AND created_at IS NOT NULL;
+    """,
+    "CREATE_VIEW_DAILY_TRANSACTION_REPORT": """
+        CREATE VIEW daily_transaction_summary AS
+        SELECT
+            c.name AS company_name,
+            DATE(ch.created_at) AS transaction_date,
+            SUM(ch.amount) AS total_amount
+        FROM
+            companies c
+        JOIN
+            charges ch ON c.id = ch.company_id
+        GROUP BY
+            c.name, DATE(ch.created_at)
+        ORDER BY
+            transaction_date DESC, company_name;
+    """,
+    "DROP_TABLE_RAW_DATA": """
+        DROP TABLE IF EXISTS raw_data;
     """
 }
